@@ -22,7 +22,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vm.boot_timeout = 600
 
     # Sync Folder config
-    # config.vm.synced_folder "./test-folder", "/home/vagrant/myFolder", owner: "vagrant", group: "vagrant"
+    config.vm.synced_folder "./test-folder", "/var/www/html", owner: "root", group: "root"
 
     # Creating a box_owner file to post the report to slack
     # config.vm.provision "shell", privileged: false, inline: "echo "+`whoami`.chomp+"@"+`hostname`.chomp+" > /home/vagrant/box_owner"
