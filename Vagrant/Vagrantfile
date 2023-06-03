@@ -28,7 +28,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # config.vm.provision "shell", privileged: false, inline: "echo "+`whoami`.chomp+"@"+`hostname`.chomp+" > /home/vagrant/box_owner"
 
     # Executing a shell script
-    # config.vm.provision "shell", privileged: true, path: "script.sh"
+    config.vm.provision "shell", privileged: true, path: "script.sh"
 
     # VM Provision config
     # config.vm.provision "file", source: "./test-folder", destination: "/home/vagrant/test-folder"
